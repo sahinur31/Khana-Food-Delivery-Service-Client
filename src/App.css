@@ -1,7 +1,9 @@
-.App {
-  text-align: center;
+.theme-color {
+  color: #D40B0D;
 }
-
+.theme-bg {
+  background-color: #D40B0D !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -1,0 +1,11 @@
+
+.searchBox .input-group {
+    width: 50% !important;
+}
+.banner-area {
+    background:url(../../images/banner.jpg) no-repeat center / cover;
+}
+.banner-content {
+    margin-top: 117px;
+    margin-bottom: 200px;
+}
