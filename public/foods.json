@@ -1,0 +1,51 @@
+[
+    {
+        "key": 101,
+        "name": "Patty Burger",
+        "price": "120",
+		"restaurant-name": "Tasty Treat",
+        "description": "Minimum quantity for "Mixed Patty Burger" is 1.",
+        "img": "https://i.ibb.co/xhyZC5N/Delicious-homemade-hamburger-and-french-fries.jpg"
+    },
+    {
+        "key": 102,
+        "name": "Beef Biriyani",
+        "price": "300",
+		"restaurant-name": "Nanna Biriyani House ",
+        "description": "Full Plate",
+        "img": "https://i.ibb.co/Hgs9FTT/beefbiriyani.jpg"
+    },
+    {
+        "key": 103,
+        "name": "Chicken Fry",
+        "price": "300",
+		"restaurant-name": "Brownia Kitcen",
+        "description": "Full chicken, 6 pcs",
+        "img": "https://i.ibb.co/f19DSM9/chicken-fry.jpg"
+    },
+    {
+        "key": 104,
+        "name": "chicken Kabab",
+        "price": "600",
+		"restaurant-name": "Nidi kitchen",
+        "description": "Minimum quantity for 4",
+        "img": "https://i.ibb.co/JRnJ8DX/kabab.jpg"
+    },
+    {
+        "key": 105,
+        "name": "Chicken Chowmein",
+        "price": "150",
+		"restaurant-name": "Adhora Treat",
+        "description": "Minimum quantity for 1",
+        "img": "https://i.ibb.co/kSDdNxr/noddles.jpg"
+    },
+    {
+        "key": 106,
+        "name": "Kacchi",
+        "price": "500",
+		"restaurant-name": "Sultans Dine",
+        "description": "Minimum quantity for 4",
+        "img": "https://i.ibb.co/d6cM9Rm/kacchi.jpg"
+    },
+    
+]

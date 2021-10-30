@@ -4,8 +4,8 @@
 }
 .banner-area {
     background:url(../../images/banner.jpg) no-repeat center / cover;
+    height: 100vh;
 }
-.banner-content {
-    margin-top: 117px;
-    margin-bottom: 200px;
+.banner-content h1 {
+    font-size:50px;
 }

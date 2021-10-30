@@ -18,7 +18,9 @@ const Header = () => {
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link as={Link} className="text-dark" to="/home">Home</Nav.Link>
-                        <Nav.Link as={Link} className="text-dark" to="/signup">Sign up</Nav.Link>
+                        <Nav.Link as={Link} className="text-dark" to="/addFood">Add Food</Nav.Link>
+                        <Nav.Link as={Link} className="text-dark" to="/myorders">My Orders</Nav.Link>
+                        <Nav.Link as={Link} className="text-dark" to="/manageorders">Manage All Orders</Nav.Link>
                         <Navbar.Text className="text-dark">
                             <a href="#login" className="text-dark">{user?.displayName}</a>
                         </Navbar.Text> 
