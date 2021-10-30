@@ -5,14 +5,12 @@ import './FoodItems.css';
 
 const FoodItems = () => {
     const [menus, setMenues] = useState([]);
-    // const [loading, setLoading] = useState(false);
     useEffect(() => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setMenues(data));
-            // setLoading(true);
     }, [])
-
+// 51 4
     return (
         <div className="add-food py-5 text-center">
             <div className="container">
@@ -23,20 +21,19 @@ const FoodItems = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    {/* {
-                    loading ? menus : <Spinner animation="border" role="status">
-                            <span className="visually-hidden">Loading...</span>
-                            </Spinner>
-                    } */}
+                {
+                    menus.length === 0 ?
+                    <Spinner animation="border" />
+                    :
+                    <div className="row">
                     {
                         menus.map(menu => <SingleMenu
                         key={menu._id}
                         menu={menu}
-                        
                         ></SingleMenu>)
                     }
                 </div>
+                }
             </div>
         </div>
     );

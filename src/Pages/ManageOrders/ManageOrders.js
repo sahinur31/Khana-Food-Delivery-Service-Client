@@ -59,7 +59,7 @@ const ManageOrders = () => {
                                             <td>{order.price}</td>
                                             <td>{order.status}</td>
                                             <td>
-                                                <Link><button className="btn btn-primary">Update</button></Link>
+                                                <Link to={`/update/${order._id}`}><button className="btn btn-primary">Update</button></Link>
                                                 {/* to={`/products/update/${product._id}`} */}
                                                 <button onClick={() => handleDelete(order._id)} className="btn btn-danger ms-2">Delete</button>
                                             </td>

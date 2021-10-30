@@ -12,6 +12,7 @@ import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
 import ManageOrders from './Pages/ManageOrders/ManageOrders';
 import PrivateRoute from './routes/PrivateRoute';
 import MyOrders from './Pages/MyOrders/MyOrders';
+import UpdateStatus from './Pages/UpdateStatus/UpdateStatus';
 
 
 function App() {
@@ -42,6 +43,9 @@ function App() {
             <PrivateRoute exact path="/manageorders">
               <ManageOrders />
             </PrivateRoute>
+            <Route exact path="/update/:id">
+              <UpdateStatus />
+            </Route>
             <Route exact path="*">
               <NotFound />
             </Route>

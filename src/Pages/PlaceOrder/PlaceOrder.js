@@ -14,7 +14,7 @@ const PlaceOrder = () => {
         fetch(`http://localhost:5000/services/${id}`)
             .then(res => res.json())
             .then(data => setOrder(data));
-    }, [])
+    }, [id])
     const onSubmit = data => {
         const orderId = id;
         data.order = orderId;
