@@ -1,6 +1,8 @@
 import { faMugHot, faTruck, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import Zoom from "react-reveal/Zoom";
+import Slide from "react-reveal/Slide";
 import './Works.css';
 
 const Works = () => {
@@ -10,11 +12,15 @@ const Works = () => {
                 <div className="row py-5">
                     <div className="col-md-12">
                         <div className="section-title">
-                            <h2>HOW IT WORKS</h2>
+                            <Zoom>
+                            <h2 className="theme-color">HOW IT WORKS</h2>
+                            <p>Our website how works implement this area. </p>
+                            </Zoom>
                         </div>
                     </div>
                 </div>
                 <div className="row">
+                    <Slide left>
                     <div className="col-md-4">
                         <div className="works-single p-4">
                             <div className="fa-4x theme-color mb-2">
@@ -42,6 +48,7 @@ const Works = () => {
                             <p>No shopping, no cooking, no counting and no cleaning. Enjoy your healthy meals with your family.</p>
                         </div>
                     </div>
+                    </Slide>
                 </div>
             </div>
         </div>

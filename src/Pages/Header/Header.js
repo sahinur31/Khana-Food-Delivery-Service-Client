@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 import useAuth from '../../hooks/useAuth';
 import logo from '../../images/foody.png';
+import Slide from "react-reveal/Slide";
 
 
 const Header = () => {
@@ -13,9 +14,12 @@ const Header = () => {
             <Navbar bg="white" variant="dark" sticky="top" collapseOnSelect expand="lg" >
                 <Container>
                     <Navbar.Brand href="/home">
-                        <img src={logo} alt="" />
+                        <Slide left>
+                            <img src={logo} alt="" />
+                        </Slide>
                     </Navbar.Brand>
                     <Navbar.Toggle />
+                    <Slide right>
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link as={Link} className="text-dark" to="/home">Home</Nav.Link>
                         <Nav.Link as={Link} className="text-dark" to="/addFood">Add Food</Nav.Link>
@@ -30,10 +34,11 @@ const Header = () => {
                                 Login
                             </Nav.Link> 
                             :
-                            <button onClick={logOut} variant="light">Logout</button>
+                            <button onClick={logOut} className="btn theme-bg text-white">Logout</button>
                         }
                        
                     </Navbar.Collapse>
+                    </Slide>
                 </Container>
             </Navbar>
         </>

@@ -2,6 +2,7 @@ import React from 'react';
 import './LogIn.css';
 import useAuth from '../../hooks/useAuth';
 import { useHistory, useLocation } from 'react-router';
+import swal from 'sweetalert';
 
 
 const LogIn = () => {
@@ -16,10 +17,11 @@ const LogIn = () => {
             {
               setIsLoading(true)
               setUser(res.user)
+              swal("Sign in Successful!", "Welcome back !", "success")
               history.push(url)
             }
               )
-          .catch((err) => console.log(err))
+          .catch((err) => swal("Something went wrong!", `${err.message}`, "error"))
           .finally(() => {
             setIsLoading(false)
           })

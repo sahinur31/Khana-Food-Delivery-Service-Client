@@ -6,7 +6,7 @@ const MyOrders = () => {
     const {user} = useFirebase();
     const [myOrders, setMyOrders] = useState([]);
     useEffect(()=> {
-        fetch(`http://localhost:5000/myorders/${user?.email}`)
+        fetch(`https://mysterious-badlands-27718.herokuapp.com/myorders/${user?.email}`)
         .then(res => res.json())
         .then(data => setMyOrders(data))
     }, [user.email])
@@ -14,7 +14,7 @@ const MyOrders = () => {
     const handleCancel = id => {
         const proceed = window.confirm('Are you sure you want to delete');
         if(proceed){
-            const url = `http://localhost:5000/myorders/${id}`;
+            const url = `https://mysterious-badlands-27718.herokuapp.com/myorders/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

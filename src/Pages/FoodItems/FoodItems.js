@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import SingleMenu from '../SingleMenu/SingleMenu';
+import Zoom from "react-reveal/Zoom";
 import './FoodItems.css';
 
 const FoodItems = () => {
     const [menus, setMenues] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://mysterious-badlands-27718.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setMenues(data));
     }, [])
@@ -16,8 +17,11 @@ const FoodItems = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="section-title mb-4">
-                            <h2>Our Food Menu</h2>
+                        <div className="section-title mb-5">
+                            <Zoom>
+                            <h2 className="theme-color">Our Food Menu</h2>
+                            <p>Our super food menu is here. You can order now for buy this food.</p>
+                            </Zoom>
                         </div>
                     </div>
                 </div>

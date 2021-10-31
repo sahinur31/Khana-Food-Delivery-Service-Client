@@ -1,27 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
 import './ManageOrders.css';
 
 const ManageOrders = () => {
     
     const [orders, setOrders] = useState([]);
     useEffect(()=> {
-        fetch('http://localhost:5000/orders/')
+        fetch('https://mysterious-badlands-27718.herokuapp.com/orders/')
         .then(res => res.json())
         .then(data => setOrders(data))
     }, [])
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure you want to delete');
         if(proceed){
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://mysterious-badlands-27718.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
             .then(res => res.json())
             .then(data => {
                 if (data.deletedCount > 0){
-                    alert('Deleted Successfully');
+                    swal('Deleted Successfully', "success");
                     const remainingProducts = orders.filter(order => order._id !== id);
                     setOrders(remainingProducts);
                 }

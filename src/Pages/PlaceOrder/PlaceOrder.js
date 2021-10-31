@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
+import swal from 'sweetalert';
 import useAuth from '../../hooks/useAuth';
 import './PlaceOrder.css';
 
@@ -11,7 +12,7 @@ const PlaceOrder = () => {
     const { id } = useParams();
     const [order, setOrder] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://mysterious-badlands-27718.herokuapp.com/services/${id}`)
             .then(res => res.json())
             .then(data => setOrder(data));
     }, [id])
@@ -21,7 +22,7 @@ const PlaceOrder = () => {
         const price = order.price;
         data.price =price;
 
-        fetch('http://localhost:5000/placeorder', {
+        fetch('https://mysterious-badlands-27718.herokuapp.com/placeorder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -31,7 +32,7 @@ const PlaceOrder = () => {
             .then(res => res.json())
             .then(result => {
                 if (result.insertedId) {
-                    alert('Order processed Successfully');
+                    swal('Order processed Successfully');
                     reset();
                 }
             })

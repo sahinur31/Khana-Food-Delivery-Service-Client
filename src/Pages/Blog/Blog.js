@@ -2,6 +2,8 @@ import React from 'react';
 import blog1 from '../../images/blog1.jpg';
 import blog2 from '../../images/blog2.jpg';
 import blog3 from '../../images/blog3.jpg';
+import Zoom from "react-reveal/Zoom";
+import Slide from "react-reveal/Slide";
 import './Blog.css';
 
 const Blog = () => {
@@ -12,12 +14,15 @@ const Blog = () => {
                     <div className="row justify-content-center py-5">
                         <div className="col-md-6">
                             <div className="section-title text-center">
+                                <Zoom>
                                 <h1 className="theme-color">Our Latest Blogs</h1>
                                 <p>Our latest Blogs are published in this area. Every latest blog are instantly published this area.</p>
+                                </Zoom>
                             </div>
                         </div>
                     </div>
                     <div className="row">
+                        <Slide left>
                         <div className="col-md-4">
                             <div className="single-blog">
                                 <div className="news-img">
@@ -51,6 +56,7 @@ const Blog = () => {
                                 <button className="btn theme-bg text-white">Read More</button>
                             </div>
                         </div>
+                        </Slide>
                     </div>
                 </div>
             </div>   

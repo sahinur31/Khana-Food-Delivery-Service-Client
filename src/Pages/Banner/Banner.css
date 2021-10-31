@@ -1,6 +1,10 @@
 
 .searchBox .input-group {
-    width: 50% !important;
+    width: 70% !important;
+}
+.searchBox .form-control {
+    border: 1px solid transparent;
+
 }
 .banner-area {
     background:url(../../images/banner.jpg) no-repeat center / cover;

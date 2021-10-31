@@ -8,3 +8,6 @@
     font-weight: 700;
     padding: 10px 15px;
 }
+.nav-link:focus, .nav-link:hover {
+    color: #D40B0D !important;
+}

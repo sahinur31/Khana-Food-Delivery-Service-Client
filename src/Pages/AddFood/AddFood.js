@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import swal from 'sweetalert';
 import './AddFood.css';
 
 const AddFood = () => {
@@ -9,10 +10,10 @@ const AddFood = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://mysterious-badlands-27718.herokuapp.com/services', data)
             .then(res => {
                 if (res.data.insertedId) {
-                    alert('added successfully');
+                    swal("Added successfully", "success")
                     reset();
                 }
             })

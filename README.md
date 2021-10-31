@@ -35,4 +35,22 @@ This project have four pages
                 <li>If a user sign up with Google, then user log in </li>
             </ul>
         </li>
+        <li> Add food Page
+            <ul>
+                <li>If a user sign up with Google, then user Add food </li>
+            </ul>
+        </li>
+        <li> My Order Page
+            <ul>
+                <li>If a user sign up with Google, then user see only with this email orders </li>
+                <li>If you can cancel an order you done it cancel button </li>
+            </ul>
+        </li>
+        <li> Manage All Order Page
+            <ul>
+                <li>If a user sign up with Google, then user see all email orders </li>
+                <li>If you want delete an order you done it delete button </li>
+                <li>If you want update status an order you done it update button like approved </li>
+            </ul>
+        </li>
     </ol>

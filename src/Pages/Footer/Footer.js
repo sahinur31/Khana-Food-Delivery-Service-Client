@@ -8,6 +8,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Nav } from 'react-bootstrap';
+import Slide from "react-reveal/Slide";
 import './Footer.css';
 const Footer = () => {
     return (
@@ -16,6 +17,7 @@ const Footer = () => {
                 <div className="container">
                 <div className="row py-5">
                     <div className="col-md-6">
+                        <Slide left>
                         <div className="footer-logo">
                         <img className="mb-3" src={logo} alt="" />
                          <p>In the year 2012, 1st March, Khana food delivery service. going to establish, with the promise to give the best and modern food delivery facility to the people of newly developed Rampura Banasree, ...</p>
@@ -34,8 +36,10 @@ const Footer = () => {
                                 <FontAwesomeIcon icon={faFacebookSquare} />
                             </div>
                             </div>
+                        </Slide>
                     </div>
-                    <div className="col-md-3">
+                   <Slide right>
+                   <div className="col-md-3">
                     <div className="footer-menu-container">
                         <Nav defaultActiveKey="/home" className="flex-column">
                             <Nav.Link href="/home">About Online service</Nav.Link>
@@ -53,14 +57,18 @@ const Footer = () => {
                             <Nav.Link eventKey="link-3">Food Review</Nav.Link>
                         </Nav>
                     </div>
+                   </Slide>
                 </div>
                 <div className="row py-3">
                     <div className="col pt-2">
                     <p className="text-muted">
-                        Copyright &copy;2021 Khana food delivery Service. All rights reserved.
+                       <Slide left>
+                       Copyright &copy;2021 Khana food delivery Service. All rights reserved.
+                       </Slide>
                     </p>
                     </div>
                     <div className="col">
+                        <Slide right>
                         <Nav className="justify-content-end" activeKey="/home">
                             <Nav.Item>
                             <Nav.Link href="/home">Privacy & Policy</Nav.Link>
@@ -71,7 +79,8 @@ const Footer = () => {
                             <Nav.Item>
                             <Nav.Link eventKey="link-2">Pricing</Nav.Link>
                             </Nav.Item>
-                        </Nav>                                          
+                        </Nav>     
+                        </Slide>                                     
                     </div>
                 </div>
                 </div>

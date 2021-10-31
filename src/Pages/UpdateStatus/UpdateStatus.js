@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
+import swal from 'sweetalert';
 
 const UpdateStatus = () => {
     const [order, setOrder] = useState({});
@@ -14,7 +15,7 @@ const UpdateStatus = () => {
         formState: { errors },
       } = useForm();
     useEffect(() => {
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://mysterious-badlands-27718.herokuapp.com/orders/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setOrder(data));
@@ -23,7 +24,7 @@ const UpdateStatus = () => {
 
     
     const onSubmit = (data) => {
-        fetch(`http://localhost:5000/update/${id}`, {
+        fetch(`https://mysterious-badlands-27718.herokuapp.com/update/${id}`, {
           method: "PUT",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(data),
@@ -31,7 +32,7 @@ const UpdateStatus = () => {
           .then((res) => res.json())
           .then((result) => {
             if (result.modifiedCount) {
-                alert("Modified successfully");
+                swal("Modified successfully", "success")
                 setIsUpdated(true);
                 reset();
             } else {

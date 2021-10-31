@@ -1,5 +1,6 @@
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect } from 'react';
+import swal from "sweetalert";
 import initializeAuthentication from '../Firebase/firebase.init';
 
 
@@ -40,6 +41,7 @@ const useFirebase = () => {
         console.log("logouttttt");
        signOut(auth).then(() => {
            setUser({})
+           swal("Log Out Successful!", "Bye Bye !", "success")
          }).catch((error) => {
            // An error happened.
          });
