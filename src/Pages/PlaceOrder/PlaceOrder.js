@@ -51,11 +51,10 @@ const PlaceOrder = () => {
                 <div className="row">
                     <div className="col-md-6">
                         <div className="place-single">
-                            
                             <img className="img-fluid" src={order.img} alt="" />
-                            
                             <p>Order Id: {id}</p>
                             <h2 className="text-capitalize">{order.name}</h2>
+                            <h4 className="my-3">Restaurant: {order.restaurantName}</h4>
                             <h6>Price: {order.price}</h6>
                             <p className="text-justify">{order.description}</p>
                         </div>
