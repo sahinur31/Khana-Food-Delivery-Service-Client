@@ -14,7 +14,7 @@ This project was created in:
 
 ## Live Site Link
 
-This project deploy in netlify website: Live site link: 
+This project deploy in netlify website: Live site link: (https://khana-food-delivery.web.app/)
 
 ### Project Feature:
 
